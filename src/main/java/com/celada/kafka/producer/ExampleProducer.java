@@ -24,7 +24,7 @@ public class ExampleProducer {
         long startTime = System.currentTimeMillis();
 
         for (int i = 0; i < 1000000; i++) {
-            ProducerRecord<String, String> record = new ProducerRecord<>("first-topic", String.valueOf(i), "message");
+            ProducerRecord<String, String> record = new ProducerRecord<>("first-topic", String.valueOf(i));
             producer.send(record);
         }
 
